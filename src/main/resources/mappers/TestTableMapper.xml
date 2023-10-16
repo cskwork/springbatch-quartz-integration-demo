@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TestTableMapper">
+    <resultMap id="result" type="com.demo.apiBatch.domain.dto.BatchJobInfoDTO">
+        <result property="jobName" column="job_name" />
+        <result property="repeatTime" column="repeat_time" />
+    </resultMap>
+
+    <select id="selectTest" parameterType="hashmap" resultMap="result">
+        <![CDATA[
+		    SELECT
+		        job_name as jobName,
+		        repeat_time as repeatTime
+		    FROM dp_batch_job_reserved
+	    ]]>
+    </select>
+
+    <update id="updateTest" parameterType="hashmap">
+        <![CDATA[
+		    update dp_batch_job_reserved
+            set repeat_time = 600002
+	    ]]>
+    </update>
+
+</mapper>
