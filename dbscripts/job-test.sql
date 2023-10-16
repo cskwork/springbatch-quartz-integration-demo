@@ -1,0 +1,3 @@
+INSERT INTO `schema`.`DP_BATCH_JOB_RESERVED` (`cron_expression`, `job_class`, `job_group`, `job_name`, `cron_job`, `repeat_time`) VALUES ( '0 0/5 * ? * *', 'com.demo.quartz.demo.apiBatch.jobs.SampleCronJob', 'Test_Cron', 'Sample Cron', '', NULL);
+INSERT INTO `schema`.`DP_BATCH_JOB_RESERVED` (`cron_expression`, `job_class`, `job_group`, `job_name`, `cron_job`, `repeat_time`) VALUES ( NULL, 'com.demo.quartz.demo.apiBatch.jobs.SimpleJob', 'Test_Job', 'Simple Job', '\0', '600000');
+INSERT INTO `schema`.`DP_BATCH_JOB_RESERVED` (`cron_expression`, `job_class`, `job_group`, `job_name`, `cron_job`, `repeat_time`) VALUES ( NULL, 'com.demo.quartz.demo.apiBatch.jobs.BatchJob', 'Test_Job', 'Simple Job', '\0', '600000');
