@@ -35,7 +35,7 @@ public class BatchConfig {
             protected JobRepository createJobRepository() throws Exception {
                 JobRepositoryFactoryBean factoryBean = new JobRepositoryFactoryBean();
                 factoryBean.setDataSource(dataSource);
-                factoryBean.setTablePrefix("DP_BATCH_"); // Your custom prefix here.
+                factoryBean.setTablePrefix("BATCH_"); // Your custom prefix here.
                 factoryBean.setTransactionManager(transactionManager);
                 factoryBean.afterPropertiesSet();
                 return  factoryBean.getObject();
