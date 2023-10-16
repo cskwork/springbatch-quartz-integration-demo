@@ -17,13 +17,13 @@ import java.util.Properties;
 public class QuartzConfig {
     private void initializeProperties() {
         properties.setProperty("org.quartz.scheduler.instanceId", "AUTO");
-        properties.setProperty("org.quartz.scheduler.instanceName", "TA_BATCH");
+        properties.setProperty("org.quartz.scheduler.instanceName", "BATCH");
 
         properties.setProperty("org.quartz.scheduler.makeSchedulerThreadDaemon", "true");
         properties.setProperty("org.quartz.plugin.shutdownHook.class", "org.quartz.plugins.management.ShutdownHookPlugin");  // properties.setProperty("org.quartz.scheduler.interruptJobsOnShutdownWithWait", "true");
         properties.setProperty("org.quartz.plugin.shutdownHook.cleanShutdown", "true");
 
-        properties.setProperty("org.quartz.jobStore.tablePrefix", "DP_BATCH_QRTZ_"); // Your custom prefix here.
+        properties.setProperty("org.quartz.jobStore.tablePrefix", "BATCH_QRTZ_"); // Your custom prefix here.
         properties.setProperty("org.quartz.jobStore.class", "org.quartz.impl.jdbcjobstore.JobStoreTX");
         properties.setProperty("org.quartz.jobStore.driverDelegateClass", "org.quartz.impl.jdbcjobstore.StdJDBCDelegate");
         properties.setProperty("org.quartz.jobStore.useProperties", "false");
