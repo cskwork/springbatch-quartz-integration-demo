@@ -82,7 +82,9 @@ public class QuartzServiceImpl implements QuartzService {
                 try {
                     JobDetail jobDetail = quartzServiceUtil.createJobDetail(jobInfo); // Make Job Detail
                     Trigger trigger = quartzServiceUtil.createTrigger(jobInfo);                    // Make Trigger
-                    quartzServiceUtil.createSchedule(jobDetail, trigger, scheduler);               // Schedule Job
+                    if(trigger != null){
+                         quartzServiceUtil.createSchedule(jobDetail, trigger, scheduler);               // Schedule Job
+                    }
                 } catch (Exception e) {
                     log.error(e.getMessage(), e);
                 }
