@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="TestTableMapper">
-    <resultMap id="result" type="com.demo.apiBatch.domain.dto.BatchJobInfoDTO">
+    <resultMap id="result" type="com.apiBatch.domain.dto.BatchJobInfoDTO">
         <result property="jobName" column="job_name" />
         <result property="repeatTime" column="repeat_time" />
     </resultMap>
